@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestion des Livres - Edu-genre Administration</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <div class="admin-container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <a href="admin-index.html" class="sidebar-brand">Edu-genre Admin</a>
+          <div class="user-info">
+            <div class="user-avatar">SD</div>
+            <div>
+              <div class="user-name">Stecy</div>
+              <div class="user-role">Administrateur</div>
+            </div>
+          </div>
+        </div>
+        <ul class="sidebar-menu">
+          <li class="sidebar-item">
+            <a href="admin-index.html" class="sidebar-link">
+              <i class="fas fa-tachometer-alt"></i>
+              <span>Tableau de bord</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="admin-articles.html" class="sidebar-link">
+              <i class="fas fa-file-alt"></i>
+              <span>Articles</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="admin-activites.html" class="sidebar-link">
+              <i class="fas fa-tasks"></i>
+              <span>Activités</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="admin-livres.html" class="sidebar-link active">
+              <i class="fas fa-book"></i>
+              <span>Livres</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="admin-messages.html" class="sidebar-link">
+              <i class="fas fa-envelope"></i>
+              <span>Messages</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <main class="main-content">
+        <div class="page-header">
+          <h1 class="page-title">Gestion des livres</h1>
+          <div>
+            <a href="admin-nouveau-livre.html" class="btn btn-primary">
+              <i class="fas fa-plus me-2"></i>Nouveau livre
+            </a>
+          </div>
+        </div>
+
+        <!-- Search and Filters -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  class="form-control table-search"
+                  placeholder="Rechercher un livre..."
+                />
+              </div>
+              <div class="col-md-3">
+                <select class="form-select">
+                  <option value="">Toutes les catégories</option>
+                  <option value="guides">Guides pédagogiques</option>
+                  <option value="activites">Activités pratiques</option>
+                  <option value="evaluation">Outils d'évaluation</option>
+                  <option value="recherche">Recherches et théories</option>
+                  <option value="temoignages">Témoignages</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <select class="form-select">
+                  <option value="">Prix</option>
+                  <option value="gratuit">Gratuit</option>
+                  <option value="payant">Payant</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Books Table -->
+        <div class="card data-table">
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Titre</th>
+                  <th>Auteur</th>
+                  <th>Prix</th>
+                  <th>Catégorie</th>
+                  <th>Statut</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Guide pratique pour une pédagogie inclusive</td>
+                  <td>Marie Dupont</td>
+                  <td>Gratuit</td>
+                  <td>Guides pédagogiques</td>
+                  <td><span class="badge bg-success">Publié</span></td>
+                  <td>
+                    <div class="data-table-actions">
+                      <a
+                        href="#"
+                        class="btn btn-sm btn-info"
+                        data-bs-toggle="tooltip"
+                        title="Voir"
+                      >
+                        <i class="fas fa-eye"></i>
+                      </a>
+                      <a
+                        href="admin-nouveau-livre.html"
+                        class="btn btn-sm btn-primary"
+                        data-bs-toggle="tooltip"
+                        title="Modifier"
+                      >
+                        <i class="fas fa-edit"></i>
+                      </a>
+                      <a
+                        href="#"
+                        class="btn btn-sm btn-danger delete-btn"
+                        data-bs-toggle="tooltip"
+                        title="Supprimer"
+                      >
+                        <i class="fas fa-trash-alt"></i>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>L'éducation inclusive au quotidien</td>
+                  <td>Jean Martin</td>
+                  <td>15,99 €</td>
+                  <td>Guides pédagogiques</td>
+                  <td><span class="badge bg-success">Publié</span></td>
+                  <td>
+                    <div class="data-table-actions">
+                      <a
+                        href="#"
+                        class="btn btn-sm btn-info"
+                        data-bs-toggle="tooltip"
+                        title="Voir"
+                      >
+                        <i class="fas fa-eye"></i>
+                      </a>
+                      <a
+                        href="admin-nouveau-livre.html"
+                        class="btn btn-sm btn-primary"
+                        data-bs-toggle="tooltip"
+                        title="Modifier"
+                      >
+                        <i class="fas fa-edit"></i>
+                      </a>
+                      <a
+                        href="#"
+                        class="btn btn-sm btn-danger delete-btn"
+                        data-bs-toggle="tooltip"
+                        title="Supprimer"
+                      >
+                        <i class="fas fa-trash-alt"></i>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Activités pour célébrer la diversité</td>
+                  <td>Sophie Leclerc</td>
+                  <td>Gratuit</td>
+                  <td>Activités pratiques</td>
+                  <td><span class="badge bg-success">Publié</span></td>
+                  <td>
+                    <div class="data-table-actions">
+                      <a
+                        href="#"
+                        class="btn btn-sm btn-info"
+                        data-bs-toggle="tooltip"
+                        title="Voir"
+                      >
+                        <i class="fas fa-eye"></i>
+                      </a>
+                      <a
+                        href="admin-nouveau-livre.html"
+                        class="btn btn-sm btn-primary"
+                        data-bs-toggle="tooltip"
+                        title="Modifier"
+                      >
+                        <i class="fas fa-edit"></i>
+                      </a>
+                      <a
+                        href="#"
+                        class="btn btn-sm btn-danger delete-btn"
+                        data-bs-toggle="tooltip"
+                        title="Supprimer"
+                      >
+                        <i class="fas fa-trash-alt"></i>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Stratégies d'évaluation inclusive</td>
+                  <td>Alexandre Dubois</td>
+                  <td>12,99 €</td>
+                  <td>Outils d'évaluation</td>
+                  <td><span class="badge bg-success">Publié</span></td>
+                  <td>
+                    <div class="data-table-actions">
+                      <a
+                        href="#"
+                        class="btn btn-sm btn-info"
+                        data-bs-toggle="tooltip"
+                        title="Voir"
+                      >
+                        <i class="fas fa-eye"></i>
+                      </a>
+                      <a
+                        href="admin-nouveau-livre.html"
+                        class="btn btn-sm btn-primary"
+                        data-bs-toggle="tooltip"
+                        title="Modifier"
+                      >
+                        <i class="fas fa-edit"></i>
+                      </a>
+                      <a
+                        href="#"
+                        class="btn btn-sm btn-danger delete-btn"
+                        data-bs-toggle="tooltip"
+                        title="Supprimer"
+                      >
+                        <i class="fas fa-trash-alt"></i>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Adapter l'environnement éducatif</td>
+                  <td>Chloé Leroy</td>
+                  <td>18,99 €</td>
+                  <td>Guides pédagogiques</td>
+                  <td><span class="badge bg-success">Publié</span></td>
+                  <td>
+                    <div class="data-table-actions">
+                      <a
+                        href="#"
+                        class="btn btn-sm btn-info"
+                        data-bs-toggle="tooltip"
+                        title="Voir"
+                      >
+                        <i class="fas fa-eye"></i>
+                      </a>
+                      <a
+                        href="admin-nouveau-livre.html"
+                        class="btn btn-sm btn-primary"
+                        data-bs-toggle="tooltip"
+                        title="Modifier"
+                      >
+                        <i class="fas fa-edit"></i>
+                      </a>
+                      <a
+                        href="#"
+                        class="btn btn-sm btn-danger delete-btn"
+                        data-bs-toggle="tooltip"
+                        title="Supprimer"
+                      >
+                        <i class="fas fa-trash-alt"></i>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Ressources pour enseigner la diversité</td>
+                  <td>Thomas Bernard</td>
+                  <td>Gratuit</td>
+                  <td>Ressources pédagogiques</td>
+                  <td><span class="badge bg-success">Publié</span></td>
+                  <td>
+                    <div class="data-table-actions">
+                      <a
+                        href="#"
+                        class="btn btn-sm btn-info"
+                        data-bs-toggle="tooltip"
+                        title="Voir"
+                      >
+                        <i class="fas fa-eye"></i>
+                      </a>
+                      <a
+                        href="admin-nouveau-livre.html"
+                        class="btn btn-sm btn-primary"
+                        data-bs-toggle="tooltip"
+                        title="Modifier"
+                      >
+                        <i class="fas fa-edit"></i>
+                      </a>
+                      <a
+                        href="#"
+                        class="btn btn-sm btn-danger delete-btn"
+                        data-bs-toggle="tooltip"
+                        title="Supprimer"
+                      >
+                        <i class="fas fa-trash-alt"></i>
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card-footer">
+            <nav>
+              <ul class="pagination justify-content-center m-0">
+                <li class="page-item disabled">
+                  <a
+                    class="page-link"
+                    href="#"
+                    tabindex="-1"
+                    aria-disabled="true"
+                    >Précédent</a
+                  >
+                </li>
+                <li class="page-item active">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">Suivant</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>

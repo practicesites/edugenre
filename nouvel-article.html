@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajouter un article - Edu-genre Administration</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <div class="admin-container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <a href="index.html" class="sidebar-brand">Edu-genre Admin</a>
+          <div class="user-info">
+            <div class="user-avatar">SD</div>
+            <div>
+              <div class="user-name">Stecy</div>
+              <div class="user-role">Administrateur</div>
+            </div>
+          </div>
+        </div>
+        <ul class="sidebar-menu">
+          <li class="sidebar-item">
+            <a href="index.html" class="sidebar-link">
+              <i class="fas fa-tachometer-alt"></i>
+              <span>Tableau de bord</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="admin-articles.html" class="sidebar-link active">
+              <i class="fas fa-file-alt"></i>
+              <span>Articles</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="admin-activites.html" class="sidebar-link">
+              <i class="fas fa-tasks"></i>
+              <span>Activités</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="admin-livres.html" class="sidebar-link">
+              <i class="fas fa-book"></i>
+              <span>Livres</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="admin-messages.html" class="sidebar-link">
+              <i class="fas fa-envelope"></i>
+              <span>Messages</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <main class="main-content">
+        <div class="page-header">
+          <h1 class="page-title">Ajouter un nouvel article</h1>
+          <div>
+            <a href="admin-articles.html" class="btn btn-outline-secondary">
+              <i class="fas fa-arrow-left me-2"></i>Retour
+            </a>
+          </div>
+        </div>
+
+        <!-- Article Form -->
+        <div class="card form-card">
+          <div class="card-body">
+            <form id="article-form">
+              <!-- Basic Information -->
+              <div class="mb-4">
+                <h5>Informations de base</h5>
+
+                <div class="mb-3">
+                  <label for="article-title" class="form-label">Titre</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="article-title"
+                    required
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="article-slug" class="form-label">Slug</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="article-slug"
+                    required
+                  />
+                  <div class="form-text">
+                    L'identifiant unique de l'article utilisé dans l'URL.
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="article-category" class="form-label"
+                      >Catégorie</label
+                    >
+                    <select class="form-select" id="article-category" required>
+                      <option value="">Sélectionner une catégorie</option>
+                      <option value="education-inclusive">
+                        Éducation inclusive
+                      </option>
+                      <option value="pedagogie-differenciee">
+                        Pédagogie différenciée
+                      </option>
+                      <option value="diversite-culturelle">
+                        Diversité culturelle
+                      </option>
+                      <option value="besoins-educatifs">
+                        Besoins éducatifs particuliers
+                      </option>
+                      <option value="ressources-pedagogiques">
+                        Ressources pédagogiques
+                      </option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-6 mb-3">
+                    <label for="article-author" class="form-label"
+                      >Auteur</label
+                    >
+                    <select class="form-select" id="article-author" required>
+                      <option value="">Sélectionner un auteur</option>
+                      <option value="1">Marie Dupont</option>
+                      <option value="2">Jean Martin</option>
+                      <option value="3">Sophie Leclerc</option>
+                      <option value="4">Thomas Bernard</option>
+                      <option value="5">Alexandre Dubois</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="article-image" class="form-label"
+                    >Image à la une</label
+                  >
+                  <div class="upload-area" id="upload-area">
+                    <input type="file" class="d-none" id="article-image" />
+                    <div class="upload-icon">
+                      <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <p>Cliquez ou glissez-déposez une image ici</p>
+                    <p class="text-muted">
+                      (Format recommandé: 1200x800px, max 2MB)
+                    </p>
+                  </div>
+                  <div class="file-preview mt-2"></div>
+                </div>
+              </div>
+
+              <!-- Content -->
+              <div class="mb-4">
+                <h5>Contenu</h5>
+
+                <div class="mb-3">
+                  <label for="article-excerpt" class="form-label"
+                    >Extrait</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="article-excerpt"
+                    rows="3"
+                    required
+                  ></textarea>
+                  <div class="form-text">
+                    Une brève description qui apparaîtra dans les aperçus
+                    d'articles.
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="article-content" class="form-label"
+                    >Contenu complet</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="article-content"
+                    rows="10"
+                    required
+                  ></textarea>
+                  <div class="form-text">
+                    Le contenu complet de l'article. Vous pouvez utiliser HTML
+                    pour le formatage.
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Tags</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Entrez les tags séparés par des virgules"
+                  />
+                  <div class="form-text">
+                    Ex: inclusion, diversité, pédagogie, apprentissage
+                  </div>
+                </div>
+              </div>
+
+              <!-- Publishing Options -->
+              <div class="mb-4">
+                <h5>Options de publication</h5>
+
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="article-publish"
+                  />
+                  <label class="form-check-label" for="article-publish">
+                    Publié
+                  </label>
+                  <div class="form-text">
+                    Cochez cette case pour rendre l'article visible sur le site.
+                  </div>
+                </div>
+
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="article-featured"
+                  />
+                  <label class="form-check-label" for="article-featured">
+                    En vedette
+                  </label>
+                  <div class="form-text">
+                    Mettre cet article en avant sur la page d'accueil.
+                  </div>
+                </div>
+
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="article-comments"
+                  />
+                  <label class="form-check-label" for="article-comments">
+                    Autoriser les commentaires
+                  </label>
+                  <div class="form-text">
+                    Permettre aux utilisateurs de commenter cet article.
+                  </div>
+                </div>
+              </div>
+
+              <!-- SEO -->
+              <div class="mb-4">
+                <h5>SEO</h5>
+
+                <div class="mb-3">
+                  <label for="article-meta-title" class="form-label"
+                    >Titre SEO</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="article-meta-title"
+                  />
+                  <div class="form-text">
+                    Laissez vide pour utiliser le titre de l'article.
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="article-meta-description" class="form-label"
+                    >Description SEO</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="article-meta-description"
+                    rows="2"
+                  ></textarea>
+                  <div class="form-text">
+                    Laissez vide pour utiliser l'extrait de l'article.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Submit Buttons -->
+              <div class="d-flex justify-content-end gap-2">
+                <button type="button" class="btn btn-outline-secondary">
+                  Enregistrer comme brouillon
+                </button>
+                <button type="submit" class="btn btn-primary">
+                  Publier l'article
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/admin.js"></script>
+  </body>
+</html>

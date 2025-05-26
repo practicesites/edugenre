@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tableau de bord - Edu-genre Administration</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/admin.css" />
+  </head>
+  <body>
+    <div class="admin-container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <a href="index.html" class="sidebar-brand">Edu-genre Admin</a>
+          <div class="user-info">
+            <div class="user-avatar">IN</div>
+            <div>
+              <div class="user-name">Stecy</div>
+              <div class="user-role">Administrateur</div>
+            </div>
+          </div>
+        </div>
+        <ul class="sidebar-menu">
+          <li class="sidebar-item">
+            <a href="index.html" class="sidebar-link active">
+              <i class="fas fa-tachometer-alt"></i>
+              <span>Tableau de bord</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="admin-articles.html" class="sidebar-link">
+              <i class="fas fa-file-alt"></i>
+              <span>Articles</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="activites.html" class="sidebar-link">
+              <i class="fas fa-tasks"></i>
+              <span>Activités</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="livres.html" class="sidebar-link">
+              <i class="fas fa-book"></i>
+              <span>Livres</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="messages.html" class="sidebar-link">
+              <i class="fas fa-envelope"></i>
+              <span>Messages</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <main class="main-content">
+        <div class="page-header">
+          <h1 class="page-title">Tableau de bord</h1>
+          <div>
+            <a
+              href="index.html"
+              class="btn btn-outline-primary"
+              target="_blank"
+            >
+              <i class="fas fa-external-link-alt me-2"></i>Voir le site
+            </a>
+          </div>
+        </div>
+
+        <!-- Stats Overview -->
+        <div class="row mb-4">
+          <div class="col-md-3">
+            <div class="card stats-card">
+              <div class="card-body">
+                <div class="stats-content">
+                  <div class="stats-icon icon-primary">
+                    <i class="fas fa-file-alt"></i>
+                  </div>
+                  <div>
+                    <div class="stats-number">24</div>
+                    <div class="stats-label">Articles</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card stats-card">
+              <div class="card-body">
+                <div class="stats-content">
+                  <div class="stats-icon icon-success">
+                    <i class="fas fa-tasks"></i>
+                  </div>
+                  <div>
+                    <div class="stats-number">18</div>
+                    <div class="stats-label">Activités</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card stats-card">
+              <div class="card-body">
+                <div class="stats-content">
+                  <div class="stats-icon icon-warning">
+                    <i class="fas fa-book"></i>
+                  </div>
+                  <div>
+                    <div class="stats-number">12</div>
+                    <div class="stats-label">Livres</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card stats-card">
+              <div class="card-body">
+                <div class="stats-content">
+                  <div class="stats-icon icon-info">
+                    <i class="fas fa-users"></i>
+                  </div>
+                  <div>
+                    <div class="stats-number">856</div>
+                    <div class="stats-label">Utilisateurs</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title mb-3">Activité récente</h5>
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Action</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                        <th>Utilisateur</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Nouvel article publié</td>
+                        <td><span class="badge bg-primary">Article</span></td>
+                        <td>Aujourd'hui 10:25</td>
+                        <td>Stecy</td>
+                      </tr>
+                      <tr>
+                        <td>Livre mis à jour</td>
+                        <td><span class="badge bg-warning">Livre</span></td>
+                        <td>Hier 16:42</td>
+                        <td>Marie</td>
+                      </tr>
+                      <tr>
+                        <td>Nouvelle activité</td>
+                        <td><span class="badge bg-success">Activité</span></td>
+                        <td>Hier 14:30</td>
+                        <td>Thomas</td>
+                      </tr>
+                      <tr>
+                        <td>Commentaire ajouté</td>
+                        <td><span class="badge bg-info">Commentaire</span></td>
+                        <td>16 juin 2023</td>
+                        <td>Sophie</td>
+                      </tr>
+                      <tr>
+                        <td>Nouvelle inscription</td>
+                        <td>
+                          <span class="badge bg-secondary">Utilisateur</span>
+                        </td>
+                        <td>15 juin 2023</td>
+                        <td>Système</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <!-- Recent Messages -->
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title mb-3">Messages récents</h5>
+                <div class="recent-messages">
+                  <div class="message-item unread">
+                    <div class="message-sender">Pierre Lambert</div>
+                    <div class="message-subject">Demande de partenariat</div>
+                    <div class="message-preview">
+                      Bonjour, je souhaiterais discuter d'une possibilité...
+                    </div>
+                    <div class="message-date">Aujourd'hui</div>
+                  </div>
+                  <div class="message-item unread">
+                    <div class="message-sender">Claire Dubois</div>
+                    <div class="message-subject">
+                      Question sur les ressources
+                    </div>
+                    <div class="message-preview">
+                      Bonjour, je suis enseignante et j'aimerais savoir...
+                    </div>
+                    <div class="message-date">Hier</div>
+                  </div>
+                  <div class="message-item">
+                    <div class="message-sender">Thomas Bernard</div>
+                    <div class="message-subject">Suggestion d'article</div>
+                    <div class="message-preview">
+                      Je souhaiterais vous suggérer un sujet d'article...
+                    </div>
+                    <div class="message-date">3 jours</div>
+                  </div>
+                </div>
+                <div class="text-center mt-3">
+                  <a href="messages.html" class="btn btn-sm btn-outline-primary"
+                    >Voir tous les messages</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title mb-3">Actions rapides</h5>
+                <div class="d-grid gap-2">
+                  <a href="nouvel-article.html" class="btn btn-outline-primary">
+                    <i class="fas fa-plus-circle me-2"></i>Nouvel article
+                  </a>
+                  <a
+                    href="nouvelle-activite.html"
+                    class="btn btn-outline-success"
+                  >
+                    <i class="fas fa-plus-circle me-2"></i>Nouvelle activité
+                  </a>
+                  <a href="nouveau-livre.html" class="btn btn-outline-warning">
+                    <i class="fas fa-plus-circle me-2"></i>Nouveau livre
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog - Edu-genre</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Edu-genre</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="blog.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="activites.html">Activités</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="bibliotheque.html">Bibliothèque</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="a-propos.html">À propos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+            <div class="nav-buttons">
+              <a href="admin-index.html" class="btn btn-outline-light me-2">
+                <i class="fas fa-user-circle me-1"></i>Admin
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title">Blog</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Blog</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <section class="blog-content py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <!-- Blog Articles -->
+            <div class="article-card mb-4 filterable-item">
+              <div class="card">
+                <img
+                  src="https://placehold.co/800x400/343a40/e9ecef?text=Article+Image"
+                  class="card-img-top"
+                  alt="Article image"
+                />
+                <div class="card-body">
+                  <div class="article-meta">
+                    <span
+                      ><i class="fas fa-calendar-alt me-2"></i>15 mai 2025</span
+                    >
+                    <span><i class="fas fa-user me-2"></i>Marie Dupont</span>
+                  </div>
+                  <div class="article-categories">
+                    <span class="badge bg-primary">Éducation inclusive</span>
+                    <span class="badge bg-secondary"
+                      >Pratiques pédagogiques</span
+                    >
+                  </div>
+                  <h5 class="card-title title">
+                    Inclusion et diversité dans l'éducation actuelle
+                  </h5>
+                  <p class="card-text description">
+                    Un aperçu des pratiques inclusives dans le système éducatif
+                    et comment elles favorisent la diversité. Découvrez des
+                    approches concrètes pour créer un environnement
+                    d'apprentissage plus inclusif.
+                  </p>
+                  <a href="#" class="btn btn-primary">Lire plus</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="article-card mb-4 filterable-item">
+              <div class="card">
+                <img
+                  src="https://placehold.co/800x400/343a40/e9ecef?text=Article+Image"
+                  class="card-img-top"
+                  alt="Article image"
+                />
+                <div class="card-body">
+                  <div class="article-meta">
+                    <span
+                      ><i class="fas fa-calendar-alt me-2"></i>8 mai 2025</span
+                    >
+                    <span><i class="fas fa-user me-2"></i>Jean Martin</span>
+                  </div>
+                  <div class="article-categories">
+                    <span class="badge bg-success"
+                      >Stratégies d'enseignement</span
+                    >
+                    <span class="badge bg-info">Adaptation</span>
+                  </div>
+                  <h5 class="card-title title">
+                    Stratégies pédagogiques adaptées pour tous les élèves
+                  </h5>
+                  <p class="card-text description">
+                    Comment adapter vos méthodes d'enseignement pour répondre
+                    aux besoins de tous les élèves, quelles que soient leurs
+                    différences. Des techniques simples mais efficaces pour une
+                    classe plus inclusive.
+                  </p>
+                  <a href="#" class="btn btn-primary">Lire plus</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="article-card mb-4 filterable-item">
+              <div class="card">
+                <img
+                  src="https://placehold.co/800x400/343a40/e9ecef?text=Article+Image"
+                  class="card-img-top"
+                  alt="Article image"
+                />
+                <div class="card-body">
+                  <div class="article-meta">
+                    <span
+                      ><i class="fas fa-calendar-alt me-2"></i>28 avril
+                      2025</span
+                    >
+                    <span><i class="fas fa-user me-2"></i>Sophie Leclerc</span>
+                  </div>
+                  <div class="article-categories">
+                    <span class="badge bg-warning">Ressources</span>
+                    <span class="badge bg-danger">Témoignages</span>
+                  </div>
+                  <h5 class="card-title title">
+                    Expériences réelles: enseignants et diversité de genre
+                  </h5>
+                  <p class="card-text description">
+                    Témoignages d'enseignants qui ont mis en place des pratiques
+                    inclusives dans leurs classes. Découvrez leurs défis, succès
+                    et leçons apprises sur le terrain.
+                  </p>
+                  <a href="#" class="btn btn-primary">Lire plus</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="article-card mb-4 filterable-item">
+              <div class="card">
+                <img
+                  src="https://placehold.co/800x400/343a40/e9ecef?text=Article+Image"
+                  class="card-img-top"
+                  alt="Article image"
+                />
+                <div class="card-body">
+                  <div class="article-meta">
+                    <span
+                      ><i class="fas fa-calendar-alt me-2"></i>15 avril
+                      2025</span
+                    >
+                    <span
+                      ><i class="fas fa-user me-2"></i>Alexandre Dubois</span
+                    >
+                  </div>
+                  <div class="article-categories">
+                    <span class="badge bg-primary">Recherche</span>
+                    <span class="badge bg-secondary">Théorie</span>
+                  </div>
+                  <h5 class="card-title title">
+                    Nouvelles recherches sur l'inclusion scolaire
+                  </h5>
+                  <p class="card-text description">
+                    Les dernières recherches et données scientifiques sur
+                    l'impact des pratiques inclusives sur la réussite scolaire
+                    et le bien-être des élèves. Une synthèse accessible des
+                    études récentes.
+                  </p>
+                  <a href="#" class="btn btn-primary">Lire plus</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="article-card mb-4 filterable-item">
+              <div class="card">
+                <img
+                  src="https://placehold.co/800x400/343a40/e9ecef?text=Article+Image"
+                  class="card-img-top"
+                  alt="Article image"
+                />
+                <div class="card-body">
+                  <div class="article-meta">
+                    <span
+                      ><i class="fas fa-calendar-alt me-2"></i>2 avril
+                      2025</span
+                    >
+                    <span><i class="fas fa-user me-2"></i>Claire Moreau</span>
+                  </div>
+                  <div class="article-categories">
+                    <span class="badge bg-success">Outils</span>
+                    <span class="badge bg-info">Évaluation</span>
+                  </div>
+                  <h5 class="card-title title">
+                    Outils d'évaluation adaptés à la diversité
+                  </h5>
+                  <p class="card-text description">
+                    Comment repenser vos méthodes d'évaluation pour qu'elles
+                    soient justes et équitables pour tous les élèves. Des
+                    exemples pratiques d'outils d'évaluation inclusive.
+                  </p>
+                  <a href="#" class="btn btn-primary">Lire plus</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pagination -->
+            <nav aria-label="Blog pagination">
+              <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                  <a
+                    class="page-link"
+                    href="#"
+                    tabindex="-1"
+                    aria-disabled="true"
+                    >Précédent</a
+                  >
+                </li>
+                <li class="page-item active">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">Suivant</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="col-lg-4">
+            <!-- Sidebar -->
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Recherche</h5>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control search-input"
+                    placeholder="Rechercher..."
+                  />
+                  <button class="btn btn-primary" type="button">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Catégories</h5>
+                <ul class="list-group list-group-flush">
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-center"
+                  >
+                    Éducation inclusive
+                    <span class="badge bg-primary rounded-pill">12</span>
+                  </li>
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-center"
+                  >
+                    Stratégies d'enseignement
+                    <span class="badge bg-primary rounded-pill">8</span>
+                  </li>
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-center"
+                  >
+                    Ressources pédagogiques
+                    <span class="badge bg-primary rounded-pill">6</span>
+                  </li>
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-center"
+                  >
+                    Témoignages
+                    <span class="badge bg-primary rounded-pill">4</span>
+                  </li>
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-center"
+                  >
+                    Recherche et théories
+                    <span class="badge bg-primary rounded-pill">7</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Articles populaires</h5>
+                <div class="popular-posts">
+                  <div class="media mb-3">
+                    <img
+                      src="https://placehold.co/100x100/343a40/e9ecef?text=Popular"
+                      class="me-3 rounded"
+                      alt="Popular post"
+                    />
+                    <div class="media-body">
+                      <h6 class="mt-0">
+                        <a href="#"
+                          >Comment adapter l'environnement éducatif?</a
+                        >
+                      </h6>
+                      <small class="text-muted">1,256 vues</small>
+                    </div>
+                  </div>
+                  <div class="media mb-3">
+                    <img
+                      src="https://placehold.co/100x100/343a40/e9ecef?text=Popular"
+                      class="me-3 rounded"
+                      alt="Popular post"
+                    />
+                    <div class="media-body">
+                      <h6 class="mt-0">
+                        <a href="#"
+                          >10 activités pour sensibiliser à la diversité</a
+                        >
+                      </h6>
+                      <small class="text-muted">956 vues</small>
+                    </div>
+                  </div>
+                  <div class="media mb-3">
+                    <img
+                      src="https://placehold.co/100x100/343a40/e9ecef?text=Popular"
+                      class="me-3 rounded"
+                      alt="Popular post"
+                    />
+                    <div class="media-body">
+                      <h6 class="mt-0">
+                        <a href="#"
+                          >Communiquer efficacement avec les parents</a
+                        >
+                      </h6>
+                      <small class="text-muted">823 vues</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Tags</h5>
+                <div class="tags">
+                  <a
+                    href="#"
+                    class="badge bg-secondary text-decoration-none m-1"
+                    >Inclusion</a
+                  >
+                  <a
+                    href="#"
+                    class="badge bg-secondary text-decoration-none m-1"
+                    >Diversité</a
+                  >
+                  <a
+                    href="#"
+                    class="badge bg-secondary text-decoration-none m-1"
+                    >Pédagogie</a
+                  >
+                  <a
+                    href="#"
+                    class="badge bg-secondary text-decoration-none m-1"
+                    >Enseignement</a
+                  >
+                  <a
+                    href="#"
+                    class="badge bg-secondary text-decoration-none m-1"
+                    >Adaptation</a
+                  >
+                  <a
+                    href="#"
+                    class="badge bg-secondary text-decoration-none m-1"
+                    >Ressources</a
+                  >
+                  <a
+                    href="#"
+                    class="badge bg-secondary text-decoration-none m-1"
+                    >Évaluation</a
+                  >
+                  <a
+                    href="#"
+                    class="badge bg-secondary text-decoration-none m-1"
+                    >Recherche</a
+                  >
+                  <a
+                    href="#"
+                    class="badge bg-secondary text-decoration-none m-1"
+                    >Témoignages</a
+                  >
+                  <a
+                    href="#"
+                    class="badge bg-secondary text-decoration-none m-1"
+                    >Pratiques</a
+                  >
+                  <a
+                    href="#"
+                    class="badge bg-secondary text-decoration-none m-1"
+                    >Éducation</a
+                  >
+                  <a
+                    href="#"
+                    class="badge bg-secondary text-decoration-none m-1"
+                    >École</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2 class="mb-4">Restez informé</h2>
+            <p class="mb-4">
+              Inscrivez-vous à notre newsletter pour recevoir nos derniers
+              articles et ressources pédagogiques.
+            </p>
+            <form class="newsletter-form">
+              <div class="input-group mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Votre adresse email"
+                  aria-label="Votre adresse email"
+                />
+                <button class="btn btn-primary" type="submit">
+                  S'inscrire
+                </button>
+              </div>
+              <div class="form-check text-start">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="agree-terms"
+                />
+                <label class="form-check-label" for="agree-terms">
+                  J'accepte de recevoir des emails d'Edu-genre.
+                  <a href="politique-de-confidentialite.html"
+                    >Politique de confidentialité</a
+                  >
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <h5>Edu-genre</h5>
+            <p>
+              Une plateforme dédiée à l'éducation inclusive et à la
+              sensibilisation à la diversité de genre dans le milieu éducatif.
+            </p>
+          </div>
+          <div class="col-lg-2 mb-4 mb-lg-0">
+            <h5>Pages</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="activites.html">Activités</a></li>
+              <li><a href="bibliotheque.html">Bibliothèque</a></li>
+              <li><a href="a-propos.html">À propos</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 mb-4 mb-lg-0">
+            <h5>Ressources</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Guides pédagogiques</a></li>
+              <li><a href="#">Outils d'évaluation</a></li>
+              <li><a href="#">Formations</a></li>
+              <li><a href="#">Témoignages</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h5>Contact</h5>
+            <address>
+              <p>
+                <i class="fas fa-map-marker-alt me-2"></i> 123 Rue de
+                l'Éducation, 75000 Paris
+              </p>
+              <p>
+                <i class="fas fa-envelope me-2"></i>
+                <a href="mailto:contact@edu-genre.org">contact@edu-genre.org</a>
+              </p>
+              <p>
+                <i class="fas fa-phone me-2"></i>
+                <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+              </p>
+            </address>
+            <div class="social-icons">
+              <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="me-2"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start">
+            <p>&copy; 2025 Edu-genre. Tous droits réservés.</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <a href="politique-de-confidentialite.html"
+              >Politique de confidentialité</a
+            >
+            <span class="mx-2">|</span>
+            <a href="#">Mentions légales</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

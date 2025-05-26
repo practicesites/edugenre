@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Edu-genre</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Edu-genre</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="activites.html">Activités</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="bibliotheque.html">Bibliothèque</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="a-propos.html">À propos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="contact.html">Contact</a>
+              </li>
+            </ul>
+            <div class="nav-buttons">
+              <a href="admin-index.html" class="btn btn-outline-light me-2">
+                <i class="fas fa-user-circle me-1"></i>Admin
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title">Contactez-nous</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Accueil</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Contact</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <section class="contact-content py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 mb-4 mb-lg-0">
+            <h2 class="section-title mb-4">Nous contacter</h2>
+            <p class="lead mb-4">
+              Nous sommes là pour répondre à vos questions et vous accompagner
+              dans vos projets pédagogiques.
+            </p>
+
+            <div class="contact-info">
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <h5>Adresse</h5>
+                  <p>123 Rue de l'Éducation<br />75000 Paris, France</p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <h5>Email</h5>
+                  <p>
+                    <a href="mailto:contact@edu-genre.org"
+                      >contact@edu-genre.org</a
+                    >
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div>
+                  <h5>Téléphone</h5>
+                  <p><a href="tel:+33123456789">+33 1 23 45 67 89</a></p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div>
+                  <h5>Horaires</h5>
+                  <p>Lundi - Vendredi: 9h - 18h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-links mt-4">
+              <h5>Suivez-nous</h5>
+              <div class="d-flex mt-3">
+                <a href="#" class="social-link me-3">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-link me-3">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-link me-3">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link me-3">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="card">
+              <div class="card-body">
+                <h2 class="card-title mb-4">Envoyez-nous un message</h2>
+                <form class="contact-form">
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="name" class="form-label">Nom complet</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        name="name"
+                        placeholder="Votre nom"
+                        required
+                      />
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        placeholder="Votre email"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="subject" class="form-label">Sujet</label>
+                    <select
+                      class="form-select"
+                      id="subject"
+                      name="subject"
+                      required
+                    >
+                      <option value="" selected disabled>
+                        Sélectionnez un sujet
+                      </option>
+                      <option value="demande">Demande d'information</option>
+                      <option value="partenariat">
+                        Proposition de partenariat
+                      </option>
+                      <option value="suggestion">Suggestion</option>
+                      <option value="assistance">Demande d'assistance</option>
+                      <option value="autre">Autre</option>
+                    </select>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea
+                      class="form-control"
+                      id="message"
+                      name="message"
+                      rows="5"
+                      placeholder="Votre message"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="mb-3 form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="privacy-policy"
+                      required
+                    />
+                    <label class="form-check-label" for="privacy-policy">
+                      J'accepte que mes données soient utilisées pour traiter ma
+                      demande conformément à la
+                      <a href="politique-de-confidentialite.html"
+                        >politique de confidentialité</a
+                      >.
+                    </label>
+                  </div>
+
+                  <div class="text-end">
+                    <button type="submit" class="btn btn-primary">
+                      Envoyer le message
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h3 class="text-center mb-4">Notre localisation</h3>
+            <div class="map-container">
+              <!-- Placeholder for map -->
+              <div class="ratio ratio-16x9">
+                <div
+                  class="bg-dark d-flex align-items-center justify-content-center text-white"
+                >
+                  <div class="text-center">
+                    <i class="fas fa-map-marker-alt fa-3x mb-3"></i>
+                    <h4>Carte interactive</h4>
+                    <p class="mb-0">
+                      123 Rue de l'Éducation, 75000 Paris, France
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section py-5">
+      <div class="container">
+        <h2 class="section-title text-center mb-5">Questions fréquentes</h2>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion" id="faqAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Comment puis-je utiliser vos ressources pédagogiques ?
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Toutes nos ressources gratuites sont téléchargeables
+                    directement depuis notre bibliothèque. Pour les ressources
+                    payantes, vous devez créer un compte et effectuer l'achat.
+                    Une fois téléchargées, vous pouvez les utiliser dans votre
+                    établissement scolaire ou pour votre pratique
+                    professionnelle, selon les conditions d'utilisation
+                    spécifiées pour chaque ressource.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    Proposez-vous des formations pour les enseignants ?
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Oui, nous proposons régulièrement des formations en ligne et
+                    en présentiel pour les enseignants et les éducateurs. Ces
+                    formations sont annoncées sur notre site et dans notre
+                    newsletter. N'hésitez pas à nous contacter pour organiser
+                    une formation personnalisée pour votre établissement ou
+                    votre équipe pédagogique.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Comment devenir partenaire d'Edu-genre ?
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Nous sommes toujours ouverts à de nouveaux partenariats qui
+                    s'alignent avec notre mission d'éducation inclusive. Qu'il
+                    s'agisse d'établissements scolaires, d'associations ou
+                    d'entreprises, vous pouvez nous envoyer votre proposition
+                    via notre formulaire de contact en sélectionnant
+                    "Proposition de partenariat" comme sujet. Notre équipe vous
+                    contactera pour discuter des possibilités de collaboration.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                    Puis-je contribuer au contenu d'Edu-genre ?
+                  </button>
+                </h2>
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFour"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Absolument ! Nous accueillons favorablement les
+                    contributions d'enseignants, d'éducateurs et de
+                    spécialistes. Si vous avez développé des ressources
+                    pédagogiques, des activités ou si vous souhaitez partager
+                    votre expérience sous forme d'article ou de témoignage,
+                    contactez-nous en précisant la nature de votre contribution.
+                    Notre équipe éditoriale examinera votre proposition et vous
+                    accompagnera dans le processus de publication.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2 class="mb-4">Restez informé</h2>
+            <p class="mb-4">
+              Inscrivez-vous à notre newsletter pour recevoir nos dernières
+              actualités et ressources.
+            </p>
+            <form class="newsletter-form">
+              <div class="input-group mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Votre adresse email"
+                  aria-label="Votre adresse email"
+                />
+                <button class="btn btn-primary" type="submit">
+                  S'inscrire
+                </button>
+              </div>
+              <div class="form-check text-start">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="agree-terms"
+                />
+                <label class="form-check-label" for="agree-terms">
+                  J'accepte de recevoir des emails d'Edu-genre.
+                  <a href="politique-de-confidentialite.html"
+                    >Politique de confidentialité</a
+                  >
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <h5>Edu-genre</h5>
+            <p>
+              Une plateforme dédiée à l'éducation inclusive et à la
+              sensibilisation à la diversité de genre dans le milieu éducatif.
+            </p>
+          </div>
+          <div class="col-lg-2 mb-4 mb-lg-0">
+            <h5>Pages</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="activites.html">Activités</a></li>
+              <li><a href="bibliotheque.html">Bibliothèque</a></li>
+              <li><a href="a-propos.html">À propos</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 mb-4 mb-lg-0">
+            <h5>Ressources</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Guides pédagogiques</a></li>
+              <li><a href="#">Outils d'évaluation</a></li>
+              <li><a href="#">Formations</a></li>
+              <li><a href="#">Témoignages</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h5>Contact</h5>
+            <address>
+              <p>
+                <i class="fas fa-map-marker-alt me-2"></i> 123 Rue de
+                l'Éducation, 75000 Paris
+              </p>
+              <p>
+                <i class="fas fa-envelope me-2"></i>
+                <a href="mailto:contact@edu-genre.org">contact@edu-genre.org</a>
+              </p>
+              <p>
+                <i class="fas fa-phone me-2"></i>
+                <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+              </p>
+            </address>
+            <div class="social-icons">
+              <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="me-2"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start">
+            <p>&copy; 2025 Edu-genre. Tous droits réservés.</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <a href="politique-de-confidentialite.html"
+              >Politique de confidentialité</a
+            >
+            <span class="mx-2">|</span>
+            <a href="#">Mentions légales</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

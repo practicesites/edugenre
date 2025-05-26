@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajouter une activité - Edu-genre Administration</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <div class="admin-container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <a href="index.html" class="sidebar-brand">Edu-genre Admin</a>
+          <div class="user-info">
+            <div class="user-avatar">SD</div>
+            <div>
+              <div class="user-name">Stecy</div>
+              <div class="user-role">Administrateur</div>
+            </div>
+          </div>
+        </div>
+        <ul class="sidebar-menu">
+          <li class="sidebar-item">
+            <a href="index.html" class="sidebar-link">
+              <i class="fas fa-tachometer-alt"></i>
+              <span>Tableau de bord</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="admin-articles.html" class="sidebar-link">
+              <i class="fas fa-file-alt"></i>
+              <span>Articles</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="admin-activites.html" class="sidebar-link active">
+              <i class="fas fa-tasks"></i>
+              <span>Activités</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="admin-livres.html" class="sidebar-link">
+              <i class="fas fa-book"></i>
+              <span>Livres</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="admin-messages.html" class="sidebar-link">
+              <i class="fas fa-envelope"></i>
+              <span>Messages</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <main class="main-content">
+        <div class="page-header">
+          <h1 class="page-title">Ajouter une nouvelle activité</h1>
+          <div>
+            <a href="admin-activites.html" class="btn btn-outline-secondary">
+              <i class="fas fa-arrow-left me-2"></i>Retour
+            </a>
+          </div>
+        </div>
+
+        <!-- Activity Form -->
+        <div class="card form-card">
+          <div class="card-body">
+            <form id="activity-form">
+              <!-- Basic Information -->
+              <div class="mb-4">
+                <h5>Informations de base</h5>
+
+                <div class="mb-3">
+                  <label for="activity-title" class="form-label">Titre</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="activity-title"
+                    required
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="activity-slug" class="form-label">Slug</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="activity-slug"
+                    required
+                  />
+                  <div class="form-text">
+                    L'identifiant unique de l'activité utilisé dans l'URL.
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="activity-category" class="form-label"
+                      >Catégorie de l'activité</label
+                    >
+                    <select class="form-select" id="activity-category" required>
+                      <option value="">Sélectionner une catégorie</option>
+                      <option value="sensibilisation">
+                        Ateliers de sensibilisation
+                      </option>
+                      <option value="expression">Expression créative</option>
+                      <option value="jeu-role">Jeux de rôles</option>
+                      <option value="discussion">Discussions et débats</option>
+                      <option value="travail-groupe">
+                        Travail collaboratif
+                      </option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-6 mb-3">
+                    <label for="activity-image" class="form-label"
+                      >Image de l'activité</label
+                    >
+                    <button
+                      type="button"
+                      class="btn btn-outline-primary w-100"
+                      id="activity-image-btn"
+                    >
+                      <i class="fas fa-upload me-2"></i>Télécharger une image
+                    </button>
+                    <input type="file" id="activity-image" class="d-none" />
+                    <div class="file-preview mt-2"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Activity Details -->
+              <div class="mb-4">
+                <h5>Détails de l'activité</h5>
+
+                <div class="row">
+                  <div class="col-md-4 mb-3">
+                    <label for="activity-age" class="form-label"
+                      >Tranche d'âge</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="activity-age"
+                      placeholder="Ex: 8-12 ans"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-md-4 mb-3">
+                    <label for="activity-duration" class="form-label"
+                      >Durée</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="activity-duration"
+                      placeholder="Ex: 2 heures"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-md-4 mb-3">
+                    <label for="activity-date" class="form-label">Date</label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="activity-date"
+                    />
+                    <div class="form-text">
+                      Format libre: "15 juin 2023", "Tous les lundis", etc.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="activity-description" class="form-label"
+                    >Description</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="activity-description"
+                    rows="5"
+                    required
+                    placeholder="Description détaillée de l'activité (HTML autorisé)"
+                  ></textarea>
+                </div>
+
+                <div class="mb-3">
+                  <label for="activity-materials" class="form-label"
+                    >Matériel nécessaire</label
+                  >
+                  <input type="file" id="activity-materials" class="d-none" />
+                  <div class="input-group">
+                    <button
+                      class="btn btn-outline-secondary"
+                      type="button"
+                      onclick="document.getElementById('activity-materials').click()"
+                    >
+                      Importer un fichier
+                    </button>
+                    <span class="form-control">Formats: txt, md, html</span>
+                  </div>
+                  <div class="form-text">
+                    Description complète de l'activité, incluant objectifs,
+                    matériel nécessaire, etc. Vous pouvez utiliser HTML pour le
+                    formatage.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Publishing Options -->
+              <div class="mb-4">
+                <h5>Options de publication</h5>
+
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="activity-publish"
+                  />
+                  <label class="form-check-label" for="activity-publish">
+                    Publié
+                  </label>
+                  <div class="form-text">
+                    Cochez cette case pour rendre l'activité visible sur le
+                    site.
+                  </div>
+                </div>
+
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="activity-featured"
+                  />
+                  <label class="form-check-label" for="activity-featured">
+                    En vedette
+                  </label>
+                  <div class="form-text">
+                    Mettre cette activité en avant sur la page d'accueil.
+                  </div>
+                </div>
+
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="activity-registration"
+                  />
+                  <label class="form-check-label" for="activity-registration">
+                    Inscription requise
+                  </label>
+                  <div class="form-text">
+                    Les utilisateurs doivent s'inscrire pour accéder à cette
+                    activité.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Submit Buttons -->
+              <div class="d-flex justify-content-end gap-2">
+                <button type="button" class="btn btn-outline-secondary">
+                  Enregistrer comme brouillon
+                </button>
+                <button type="submit" class="btn btn-primary">
+                  Publier l'activité
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajouter un livre - Edu-genre Administration</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/admin.css" />
+  </head>
+  <body>
+    <div class="admin-container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <a href="index.html" class="sidebar-brand">Edu-genre Admin</a>
+          <div class="user-info">
+            <div class="user-avatar">SD</div>
+            <div>
+              <div class="user-name">Stecy</div>
+              <div class="user-role">Administrateur</div>
+            </div>
+          </div>
+        </div>
+        <ul class="sidebar-menu">
+          <li class="sidebar-item">
+            <a href="index.html" class="sidebar-link">
+              <i class="fas fa-tachometer-alt"></i>
+              <span>Tableau de bord</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="admin-articles.html" class="sidebar-link">
+              <i class="fas fa-file-alt"></i>
+              <span>Articles</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="activites.html" class="sidebar-link">
+              <i class="fas fa-tasks"></i>
+              <span>Activités</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="admin-livres.html" class="sidebar-link active">
+              <i class="fas fa-book"></i>
+              <span>Livres</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="admin-messages.html" class="sidebar-link">
+              <i class="fas fa-envelope"></i>
+              <span>Messages</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <main class="main-content">
+        <div class="page-header">
+          <h1 class="page-title">Ajouter un nouveau livre</h1>
+          <div>
+            <a href="admin-livres.html" class="btn btn-outline-secondary">
+              <i class="fas fa-arrow-left me-2"></i>Retour
+            </a>
+          </div>
+        </div>
+
+        <!-- Book Form -->
+        <div class="card form-card">
+          <div class="card-body">
+            <form id="book-form">
+              <!-- Basic Information -->
+              <div class="mb-4">
+                <h5>Informations de base</h5>
+
+                <div class="mb-3">
+                  <label for="book-title" class="form-label">Titre</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="book-title"
+                    placeholder="Titre du livre"
+                    required
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="book-slug" class="form-label">Slug</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="book-slug"
+                    placeholder="slug-du-livre"
+                    required
+                  />
+                  <div class="form-text">
+                    L'identifiant unique du livre utilisé dans l'URL.
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="book-author" class="form-label">Auteur</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="book-author"
+                    placeholder="Nom de l'auteur"
+                    required
+                  />
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="book-category" class="form-label"
+                      >Catégorie</label
+                    >
+                    <select class="form-select" id="book-category" required>
+                      <option value="">Catégorie du livre</option>
+                      <option value="guides">Guides pédagogiques</option>
+                      <option value="activites">Activités pratiques</option>
+                      <option value="evaluation">Outils d'évaluation</option>
+                      <option value="recherche">Recherches et théories</option>
+                      <option value="temoignages">Témoignages</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-6 mb-3">
+                    <label for="book-cover" class="form-label"
+                      >Image de couverture</label
+                    >
+                    <button
+                      type="button"
+                      class="btn btn-outline-primary w-100"
+                      id="book-cover-btn"
+                    >
+                      <i class="fas fa-upload me-2"></i>Télécharger une image
+                    </button>
+                    <input type="file" id="book-cover" class="d-none" />
+                    <div class="file-preview mt-2"></div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="book-currency" class="form-label">Devise</label>
+                    <select class="form-select" id="book-currency">
+                      <option value="EUR">Euro (€)</option>
+                      <option value="USD">Dollar américain ($)</option>
+                      <option value="GBP">Livre sterling (£)</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-6 mb-3">
+                    <label for="book-price" class="form-label">Prix</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="book-price"
+                      placeholder="0.00"
+                      step="0.01"
+                      min="0"
+                    />
+                    <div class="form-text">
+                      Laissez vide si le livre est gratuit.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-check mb-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="book-free"
+                  />
+                  <label class="form-check-label" for="book-free">
+                    Livre gratuit
+                  </label>
+                  <div class="form-text">
+                    Ce livre peut être téléchargé gratuitement par tout
+                    utilisateur connecté.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Content -->
+              <div class="mb-4">
+                <h5>Contenu</h5>
+
+                <div class="mb-3">
+                  <label for="book-preview" class="form-label"
+                    >Contenu de l'aperçu</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="book-preview"
+                    rows="4"
+                    placeholder="Contenu de l'aperçu gratuit (HTML autorisé)"
+                  ></textarea>
+                  <div class="form-text">
+                    Une brève description qui apparaîtra dans les aperçus de
+                    livres.
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="book-excerpt" class="form-label"
+                    >Contenu de l'extrait</label
+                  >
+                  <div class="input-group mb-3">
+                    <input type="file" id="book-excerpt-file" class="d-none" />
+                    <button
+                      class="btn btn-outline-secondary"
+                      type="button"
+                      onclick="document.getElementById('book-excerpt-file').click()"
+                    >
+                      Importer un fichier
+                    </button>
+                    <span class="form-control">Formats: txt, md, html</span>
+                  </div>
+                  <div class="form-text">
+                    Extrait du livre accessible gratuitement à tous les
+                    utilisateurs. Vous pouvez utiliser HTML pour le formatage.
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="book-content" class="form-label"
+                    >Contenu complet</label
+                  >
+                  <div class="input-group mb-3">
+                    <input type="file" id="book-content-file" class="d-none" />
+                    <button
+                      class="btn btn-outline-secondary"
+                      type="button"
+                      onclick="document.getElementById('book-content-file').click()"
+                    >
+                      Importer un fichier
+                    </button>
+                    <span class="form-control">Formats: txt, md, html</span>
+                  </div>
+                  <div class="form-text">
+                    Contenu complet accessible uniquement après achat. Vous
+                    pouvez utiliser HTML pour le formatage.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Publishing Options -->
+              <div class="mb-4">
+                <h5>Options de publication</h5>
+
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="book-publish"
+                  />
+                  <label class="form-check-label" for="book-publish">
+                    Publié
+                  </label>
+                  <div class="form-text">
+                    Cochez pour rendre le livre visible sur le site.
+                  </div>
+                </div>
+
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="book-featured"
+                  />
+                  <label class="form-check-label" for="book-featured">
+                    En vedette
+                  </label>
+                  <div class="form-text">
+                    Mettre ce livre en avant sur la page d'accueil.
+                  </div>
+                </div>
+
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="book-new"
+                  />
+                  <label class="form-check-label" for="book-new">
+                    Nouveau
+                  </label>
+                  <div class="form-text">
+                    Marquer ce livre comme nouvelle parution.
+                  </div>
+                </div>
+
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="book-bestseller"
+                  />
+                  <label class="form-check-label" for="book-bestseller">
+                    Bestseller
+                  </label>
+                  <div class="form-text">
+                    Marquer ce livre comme bestseller.
+                  </div>
+                </div>
+
+                <div class="form-check mb-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="book-promotion"
+                  />
+                  <label class="form-check-label" for="book-promotion">
+                    En promotion
+                  </label>
+                  <div class="form-text">
+                    Marquer ce livre comme étant en promotion.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Submit Buttons -->
+              <div class="d-flex justify-content-end gap-2">
+                <button type="button" class="btn btn-outline-secondary">
+                  Enregistrer comme brouillon
+                </button>
+                <button type="submit" class="btn btn-primary">
+                  Publier le livre
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/admin.js"></script>
+  </body>
+</html>
